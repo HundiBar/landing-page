@@ -1,0 +1,82 @@
+
+.cards-container {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 400px;
+
+}
+
+.card-avatar {
+  flex: 25%;
+  justify-content: center;
+  padding: 15px 15px;
+  margin: 0 25px;
+  position: relative;
+}
+
+.card-avatar video {
+  height:300px;
+  width: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatar-inside-text {
+  font-weight: bold;
+  font-size: 25px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #15437E;
+  visibility: hidden;
+  opacity: 0;
+  transition: 2s;
+  text-align: center;
+
+}
+
+.card-avatar video:hover {
+   transform: rotateZ(360deg);
+   transition: 3s;
+   height:300px;
+   width: 300px;
+   border-radius: 50%;
+   object-fit: cover;
+}
+
+.card-avatar video:hover + .avatar-inside-text {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(300px);
+}
+
+@media screen and (max-width: 1200px) {
+  .card-avatar {
+   margin: 150px 25px;
+  }
+
+@media screen and (max-width: 960px) {
+  .card-avatar {
+   margin: 150px 25px;
+  }
+/*}*/
+@media screen and (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .card-avatar {
+    margin: 150px 25px;
+  }
+}
+@media screen and (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .card-avatar {
+    margin: 150px 25px;
+  }
+}
+
